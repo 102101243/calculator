@@ -5,18 +5,19 @@ from turtle import onclick
 from math import *
 # 定义界面
 jsq= tkinter.Tk()
-jsq.geometry('400x600+500+200')
+jsq.geometry('450x500+500+200')
 jsq.resizable(False, False)
 jsq.title("计算器")
+
 # 定义输出文本框
 contentVar = tkinter.StringVar(jsq, "")
-contentEnter = tkinter.Entry(jsq,textvariable=contentVar)
+contentEnter = tkinter.Entry(jsq, textvariable=contentVar)
 contentEnter['state'] = "readonly"
-contentEnter.place(x=25, y=30, width=350, height=50)
+contentEnter.place(x=25, y=30, width=400, height=50)
 contentEnter.configure(font=('Helvetica', 20))
 # 定义按钮和布局
-bvalue = ['C', '(', ')', '/', '*', '1', '2', '3', '+', '-', '4', '5', '6', 'sin', 'cos', '7', '8', '9',
-          'tan', '**', '0', '.', 'asin', 'acos', 'atan', 'back']
+bvalue = ['C', '(', ')', '/', '*', 'back', '1', '2', '3', '+', '-', '**', '4', '5', '6', 'sin', 'cos', 'tan',
+          '7', '8', '9', 'asin', 'acos', 'atan', '0', '.']
 index = -1
 for i in range(6):
     for j in range(5):
